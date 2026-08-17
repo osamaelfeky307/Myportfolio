@@ -317,7 +317,7 @@ export const EDUCATION: EducationItem[] = [
 export interface SkillCategory {
   number: string;
   heading: string;
-  proficiency: "Advanced" | "Comfortable" | "Practicing" | "Methodology";
+  proficiency: "Advanced" | "Comfortable" | "Practicing" | "Methodology" | "Leadership";
   skills: string[];
 }
 
