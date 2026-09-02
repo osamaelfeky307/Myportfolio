@@ -3,6 +3,7 @@
 import { EXPERIENCE } from "@/lib/data";
 import { ArrowUpRight } from "lucide-react";
 import FadeIn from "./FadeIn";
+import Carousel from "./Carousel";
 
 export default function Experience() {
   return (
@@ -87,6 +88,12 @@ export default function Experience() {
                           </li>
                         ))}
                       </ul>
+
+                      {entry.photos && entry.photos.length > 0 && (
+                        <div className="mt-10">
+                          <Carousel photos={entry.photos} autoplay autoplayInterval={3500} />
+                        </div>
+                      )}
                     </div>
                   </div>
                   </FadeIn>

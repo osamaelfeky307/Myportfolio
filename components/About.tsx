@@ -139,7 +139,7 @@ export default function About() {
                     
                     {award.photos && award.photos.length > 0 && (
                       <div className="pt-2">
-                        <Carousel photos={award.photos} />
+                        <Carousel photos={award.photos} autoplay />
                       </div>
                     )}
                   </div>

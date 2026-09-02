@@ -24,7 +24,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Osama Elfeky — Software Engineer & Medical Informatics",
   description:
-    "Personal portfolio of Osama Elfeky — BSc Computers & AI (Benha University), MSc Candidate at University of Pisa. AI-powered healthcare software, full-stack web, and cross-platform mobile.",
+    "Personal portfolio of Osama Elfeky — BSc Computers & AI (Benha University). AI-powered healthcare software, full-stack web, and cross-platform mobile.",
   keywords: [
     "Osama Elfeky", "Software Engineer", "Medical Informatics",
     "AI", "Next.js", "Flutter", "Healthcare", "Egypt",

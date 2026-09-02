@@ -122,6 +122,7 @@ export interface ExperienceEntry {
   logo?: string;
   secondaryLogo?: string;
   bullets: string[];
+  photos?: string[];
 }
 
 export interface ExperienceCard {
@@ -235,6 +236,12 @@ export const EXPERIENCE: ExperienceCard[] = [
           "Organized the competition, managed communications, and led the organizing committee.",
           "Ensured compliance with IEEE regulations and promoted the IEEE brand across the section.",
         ],
+        photos: [
+          "/photos/IEEE/IEEEXtreme%202024/4F0A0365.JPG",
+          "/photos/IEEE/IEEEXtreme%202024/4F0A0433.JPG",
+          "/photos/IEEE/IEEEXtreme%202024/4F0A0440.JPG",
+          "/photos/IEEE/IEEEXtreme%202024/4F0A0458.JPG",
+        ],
       },
       {
         period: "2020 – 2023",
@@ -244,6 +251,49 @@ export const EXPERIENCE: ExperienceCard[] = [
         bullets: [
           "Secretary (2021-2023): managed records, organized events, and established partnerships with industry associations.",
           "PR Member (2020): managed social media, wrote newsletters, and promoted the student branch.",
+        ],
+        photos: [
+          "/photos/IEEE/IEEE%20BUB%202023%20opening/488645434_29647435468176921_901130112258781550_n.jpg",
+          "/photos/IEEE/IEEE%20BUB%202023%20opening/488685509_29647435208176947_2590513308802882330_n.jpg",
+          "/photos/IEEE/IEEE%20BUB%202023%20opening/488964602_29647435281510273_762860772581035193_n.jpg",
+          "/photos/IEEE/IEEE%20BUB%20closing%202022/487980808_29625551367031998_4690002575883972712_n.jpg",
+          "/photos/IEEE/IEEE%20BUB%20closing%202022/488260891_29625551273698674_3238729052651223605_n.jpg",
+          "/photos/IEEE/IEEE%20BUB%20closing%202022/488524440_29625551373698664_466540010010591764_n.jpg",
+          "/photos/IEEE/IEEE%20BUB%20closing%202022/488603631_29625551543698647_5577413905148143063_n.jpg",
+          "/photos/IEEE/IEEE%20BUB%20closing%202022/488861283_29625551343698667_1587244615956320684_n.jpg",
+          "/photos/IEEE/Ghostech/481258163_1085489040271829_5100716681277175155_n.jpg",
+          "/photos/IEEE/Ghostech/481266763_1085219690298764_6717328087499865185_n.jpg",
+          "/photos/IEEE/Ghostech/481302019_1085219630298770_2326087848327977302_n.jpg",
+          "/photos/IEEE/Ghostech/481337527_1085225996964800_2274634445877971079_n.jpg",
+          "/photos/IEEE/Ghostech/481512221_1085219676965432_8144787901119538878_n.jpg",
+          "/photos/IEEE/Ghostech/481571674_1085219720298761_1200232532292325693_n.jpg",
+          "/photos/IEEE/Ghostech/482241079_1085219416965458_8685004060344909979_n.jpg",
+          "/photos/IEEE/Mind%20game%20-%202022/487944717_29607095308877604_9128346046789501882_n.jpg",
+          "/photos/IEEE/Mind%20game%20-%202022/488035464_29607104642210004_2250542987783792997_n.jpg",
+          "/photos/IEEE/Mind%20game%20-%202022/488261628_29607095325544269_3249869337189868220_n.jpg",
+          "/photos/IEEE/Mind%20game%20-%202022/488459932_29610846328502502_3060237644078627842_n.jpg",
+          "/photos/IEEE/Mind%20game%20-%202022/488673450_29607108665542935_3976378299794905792_n.jpg",
+          "/photos/IEEE/Portal%20-%20beyond%20now/474760956_1058840406270026_8363974067718228005_n.jpg",
+          "/photos/IEEE/Portal%20-%20beyond%20now/474810162_1058840669603333_5093622283940698607_n.jpg",
+          "/photos/IEEE/Portal%20out%20of%20time%202022/481296738_29396458666607937_4281056310916687077_n.jpg",
+          "/photos/IEEE/Portal%20out%20of%20time%202022/483511226_29396461203274350_3686005266575893585_n.jpg",
+          "/photos/IEEE/Portal%20out%20of%20time%202022/483523875_29396456346608169_2033905929613795799_n.jpg",
+          "/photos/IEEE/Portal%20out%20of%20time%202022/483525513_29396458776607926_7886567094356779951_n.jpg",
+        ],
+      },
+      {
+        period: "2020 – 2024",
+        role: "Different Roles & Highlights",
+        org: "IEEE Benha Student Branch",
+        logo: "/logos/IEEE bub sb.png",
+        bullets: [
+          "Took on various leadership and operational roles across multiple IEEE events and initiatives.",
+        ],
+        photos: [
+          "/photos/IEEE/different%20roles/472738256_908052024820645_5929518522484023623_n.jpg",
+          "/photos/IEEE/different%20roles/480976048_8872308406225564_3210987777397410489_n.jpg",
+          "/photos/IEEE/different%20roles/481223138_3113052045502677_7254621139956986820_n.jpg",
+          "/photos/IEEE/different%20roles/488926726_29645021861751615_5278344752591858771_n.jpg",
         ],
       },
       {
@@ -275,17 +325,6 @@ export interface EducationItem {
 }
 
 export const EDUCATION: EducationItem[] = [
-  {
-    id: "pisa",
-    type: "degree",
-    institution: "University of Pisa",
-    degree: "MSc — Informatics for Digital Health",
-    field: "Medical Informatics",
-    period: "Admitted March 2026",
-    highlight: "Upcoming",
-    note: "Italy",
-    logo: "/logos/University_of_Pisa.svg",
-  },
   {
     id: "benha",
     type: "degree",
@@ -358,5 +397,5 @@ export const STATS = [
   { value: "1st Place", label: "AI Innovations Marathon", sub: "Benha University · 10k EGP" },
   { value: "IEEE", label: "Research Author", sub: "ESPC 2024 · 4th of 27" },
   { value: "Next.js & Flutter", label: "Primary Stack", sub: "Web + Cross-platform" },
-  { value: "MSc", label: "Candidate — Univ. of Pisa", sub: "Informatics for Digital Health" },
+
 ];

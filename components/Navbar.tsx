@@ -87,29 +87,31 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-20 left-0 right-0 bg-bg border-b border-border transition-all duration-300 overflow-hidden flex justify-center ${
-          open ? "max-h-64 border-b" : "max-h-0 border-transparent"
+        className={`md:hidden absolute top-20 left-0 right-0 bg-bg/95 backdrop-blur-sm border-b border-border transition-all duration-300 overflow-hidden flex justify-center ${
+          open ? "max-h-80 border-b" : "max-h-0 border-transparent"
         }`}
       >
-        <div className="w-full max-w-5xl px-8 py-4 flex flex-col gap-4">
+        <div className="w-[88%] max-w-5xl mx-auto py-6 flex flex-col gap-1">
           {NAV_LINKS.map(({ label, href }) => (
             <a
               key={href}
               href={href}
               onClick={(e) => { e.preventDefault(); go(href); }}
-              className="text-base font-medium text-fg hover:text-accent transition-colors"
+              className="text-base font-medium text-fg hover:text-accent transition-colors py-3"
             >
               {label}
             </a>
           ))}
-          <a
-            href={PERSONAL.cvLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-base font-medium text-accent transition-colors pt-2 border-t border-border"
-          >
-            Download CV
-          </a>
+          <div className="border-t border-border mt-2 pt-4">
+            <a
+              href={PERSONAL.cvLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-base font-medium text-accent hover:text-fg transition-colors"
+            >
+              Download CV
+            </a>
+          </div>
         </div>
       </div>
     </header>
