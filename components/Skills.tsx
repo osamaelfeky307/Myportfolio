@@ -18,8 +18,8 @@ export default function Skills() {
         <div className="flex flex-col gap-24">
           {SKILLS.map((cat, i) => (
             <FadeIn key={cat.heading} delay={0.1}>
-              <div className="grid md:grid-cols-12 gap-8 md:gap-16 border-t border-border pt-16">
-                <div className="flex items-baseline justify-between border-b border-border pb-8 mb-12">
+              <div className="border-t border-border pt-16">
+                <div className="flex items-baseline justify-between pb-8 mb-8 border-b border-border">
                   <h3 className="font-serif text-3xl font-bold text-fg">{cat.heading}</h3>
                   <span className="editorial-label text-accent">{cat.proficiency}</span>
                 </div>
