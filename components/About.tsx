@@ -87,7 +87,7 @@ export default function About() {
             <FadeIn delay={0.1}>
               <div className="flex flex-col gap-8 text-lg text-fg-2 font-light leading-[1.8]">
                 {/* Accent left-border on first paragraph */}
-                <p className="pl-5 border-l-2 border-accent">
+                <p className="pl-6 border-l-2 border-accent" style={{ paddingLeft: '1.5rem' }}>
                   I am a Medical Informatics graduate specializing in Computers and Artificial Intelligence from Benha University. I am ambitious and detail-oriented, with practical experience in software development following the SDLC process, from requirements gathering and design to implementation and testing.
                 </p>
                 <p>

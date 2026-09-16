@@ -146,9 +146,9 @@ export const EXPERIENCE: ExperienceCard[] = [
         logo: "/logos/eyouth.png",
         secondaryLogo: "/logos/mcit.png",
         bullets: [
-          "Supervised operations for the Digital Egypt Cubs Initiative, managing and following up with area coordinators.",
+          "Supervised operations for the Digital Egypt Cubs Initiative, managing and following up with a team of 20 area coordinators.",
           "Maintained strong field presence to monitor workflows and ensure full compliance with quality standards.",
-          "Reviewed and approved student attendance records and monitored lecture execution.",
+          "Reviewed and approved student attendance records and monitored lecture execution, successfully overseeing 811 completed sessions.",
           "Oversaw backup coordinators, dynamically distributing tasks to guarantee operational continuity.",
           "Resolved escalated operational issues and reported workflow progress directly to the Operations Supervisor.",
         ],

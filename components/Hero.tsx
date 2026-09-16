@@ -1,11 +1,26 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { PERSONAL, STATS } from "@/lib/data";
 import { ArrowDown } from "lucide-react";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 
 export default function Hero() {
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+    if (imgRef.current) observer.observe(imgRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   const go = (href: string) =>
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
 
@@ -82,7 +97,7 @@ export default function Hero() {
             style={{ animationDelay: "0.2s" }}
           >
             {/* Photo with orange corner accent */}
-            <div className="relative">
+            <div className="relative" ref={imgRef}>
               {/* Orange corner decoration */}
               <div
                 className="absolute -top-3 -right-3 w-16 h-16 border-t-2 border-r-2 border-accent pointer-events-none z-10"
@@ -98,12 +113,12 @@ export default function Hero() {
                   src="/profile.jpg"
                   alt="Osama Elfeky"
                   fill
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                  className={`object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out ${isInView ? "max-lg:grayscale-0 max-lg:scale-105" : ""}`}
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
                 {/* Subtle orange gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className={`absolute inset-0 bg-gradient-to-t from-accent/10 to-transparent transition-opacity duration-700 ${isInView ? "max-lg:opacity-100 opacity-0 group-hover:opacity-100" : "opacity-0 group-hover:opacity-100"}`} />
               </div>
             </div>
 
