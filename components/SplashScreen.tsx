@@ -44,7 +44,7 @@ export default function SplashScreen() {
 
           {/* Logo */}
           <motion.div
-            className="relative w-[80vw] max-w-[300px] h-[80px] md:h-[96px] mb-3 shrink-0"
+            className="relative w-[80vw] max-w-[300px] h-[80px] md:h-[96px] mb-10 shrink-0"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -58,15 +58,7 @@ export default function SplashScreen() {
             />
           </motion.div>
 
-          {/* Name tagline */}
-          <motion.p
-            className="text-xs font-mono text-fg-3 uppercase tracking-[0.25em] mb-10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            Software Engineer &amp; Medical Informatics
-          </motion.p>
+
 
           {/* Progress bar with glow */}
           <div className="w-48 h-[3px] bg-border rounded-full overflow-hidden">

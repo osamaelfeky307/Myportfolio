@@ -15,7 +15,7 @@ export const PERSONAL = {
   github: "https://github.com/osamaelfeky307",
   whatsapp: "https://wa.me/qr/J2SRPUH2VRODH1",
   cvLink:
-    "https://drive.google.com/file/d/1vSvs5rYiuK1UXwfMfd2WynQ0-4iDoZ0l/view?usp=drive_link",
+    "/Osama Fayez Abdelkhalik Attia Othamn CV - July 2026.pdf",
 };
 
 export type ProjectTag =
@@ -358,7 +358,7 @@ export const EDUCATION: EducationItem[] = [
     field: "Scientific Computing / Medical Informatics",
     period: "2020 – 2024",
     grade: "GPA 3.11 · 132 Credits",
-    link: "https://drive.google.com/file/d/1vSvs5rYiuK1UXwfMfd2WynQ0-4iDoZ0l/view?usp=drive_link",
+    link: "/Osama Fayez Abdelkhalik Attia Othamn CV - July 2026.pdf",
     linkLabel: "View Transcript",
     note: "Benha, Egypt",
     logo: "/logos/Benha University.png",
