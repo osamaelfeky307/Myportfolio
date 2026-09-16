@@ -1,23 +1,28 @@
 @import "tailwindcss";
 
 /* ═══════════════════════════════════════
-   MINIMAL EDITORIAL PORTFOLIO — Tokens
+   PREMIUM EDITORIAL PORTFOLIO — Tokens
 ═══════════════════════════════════════ */
 :root {
-  --bg:           #fafaf9; /* Warm off-white/cream */
+  --bg:           #fafaf9;
+  --bg-surface:   #f5f4f2;
   --bg-card:      #ffffff;
   --border:       #e7e5e4;
   --border-hover: #d6d3d1;
 
-  --fg:           #1c1917; /* Off-black */
+  --fg:           #1c1917;
   --fg-2:         #44403c;
   --fg-3:         #78716c;
 
-  --accent:       #f97316; /* Coral / Orange */
-  
-  --radius:       0px;
-  --radius-sm:    0px;
-  --radius-xs:    0px;
+  --accent:       #f97316;
+  --accent-light: rgba(249, 115, 22, 0.12);
+  --accent-glow:  rgba(249, 115, 22, 0.25);
+
+  --radius:       4px;
+  --radius-sm:    3px;
+  --radius-xs:    2px;
+  --radius-lg:    8px;
+  --radius-pill:  999px;
 }
 
 /* ═══════════════════════════════════════
@@ -25,6 +30,7 @@
 ═══════════════════════════════════════ */
 @theme {
   --color-bg:           var(--bg);
+  --color-surface:      var(--bg-surface);
   --color-card:         var(--bg-card);
   --color-border:       var(--border);
   --color-border-hover: var(--border-hover);
@@ -34,8 +40,8 @@
   --color-fg-3:         var(--fg-3);
 
   --color-accent:       var(--accent);
+  --color-accent-light: var(--accent-light);
 
-  /* Fix: Use --font-* for Tailwind v4 font families */
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-jetbrains), "Courier New", monospace;
   --font-serif: var(--font-playfair), Georgia, serif;
@@ -44,6 +50,10 @@
   --animate-fade-in:      fadeIn 0.5s ease both;
   --animate-fade-in-up:   fadeInUp 0.6s ease both;
   --animate-slide-in:     slideIn 0.5s ease both;
+  --animate-shimmer:      shimmer 2.5s linear infinite;
+  --animate-pulse-ring:   pulseRing 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  --animate-float:        float 6s ease-in-out infinite;
+  --animate-glow-pulse:   glowPulse 2s ease-in-out infinite;
 
   @keyframes fadeIn {
     from { opacity: 0; }
@@ -58,6 +68,33 @@
   @keyframes slideIn {
     from { opacity: 0; transform: translateX(-12px); }
     to   { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  @keyframes pulseRing {
+    0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(249,115,22,0.4); }
+    70%  { transform: scale(1); box-shadow: 0 0 0 20px rgba(249,115,22,0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(249,115,22,0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-12px); }
+  }
+
+  @keyframes glowPulse {
+    0%, 100% { opacity: 0.6; }
+    50%       { opacity: 1; }
+  }
+
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 }
 
@@ -102,10 +139,72 @@ body {
   text-transform: uppercase;
 }
 
+/* Dot grid background pattern */
+.dot-pattern {
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Diagonal stripe pattern (for Contact section) */
+.stripe-pattern {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(255,255,255,0.04) 10px,
+    rgba(255,255,255,0.04) 20px
+  );
+}
+
+/* Orange glow blob */
+.glow-blob {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(249,115,22,0.18) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+/* Shimmer gradient text */
+.shimmer-text {
+  background: linear-gradient(
+    90deg,
+    var(--fg) 0%,
+    var(--accent) 40%,
+    var(--fg) 80%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Pill tag style */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--fg-2);
+  background: var(--bg-card);
+  transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-light);
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--border-hover); }
+::-webkit-scrollbar-thumb { background: var(--border-hover); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--fg-3); }
 
 /* Selection */
@@ -116,6 +215,7 @@ body {
 
 /* Focus ring */
 *:focus-visible {
-  outline: 1px solid var(--accent);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
+  border-radius: var(--radius-xs);
 }

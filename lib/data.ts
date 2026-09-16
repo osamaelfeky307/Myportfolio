@@ -12,7 +12,7 @@ export const PERSONAL = {
   email: "osamaelfeky@ieee.org",
   phone: "+20 106 233 7475",
   linkedin: "https://www.linkedin.com/in/osama-elfeky-952ab7202/",
-  github: "https://github.com/osama-elfeky", // placeholder — update if different
+  github: "https://github.com/osamaelfeky307",
   whatsapp: "https://wa.me/qr/J2SRPUH2VRODH1",
   cvLink:
     "https://drive.google.com/file/d/1vSvs5rYiuK1UXwfMfd2WynQ0-4iDoZ0l/view?usp=drive_link",
@@ -228,13 +228,34 @@ export const EXPERIENCE: ExperienceCard[] = [
     icon: "heart",
     entries: [
       {
-        period: "2023 – 2024",
-        role: "Section Lead — IEEEXtreme 17.0 & 18.0",
+        period: "Oct 2023",
+        role: "Egypt Section Lead — IEEEXtreme 17.0",
         org: "IEEE Egypt Section",
         logo: "/logos/IEEEXtreme.jpg",
         bullets: [
-          "Organized the competition, managed communications, and led the organizing committee.",
-          "Ensured compliance with IEEE regulations and promoted the IEEE brand across the section.",
+          "Led a 51-person organizing team — 28 ambassadors and 23 volunteers — supporting 123 participating teams nationwide.",
+          "Organized the full competition lifecycle: logistics, communications, and day-of execution across the Egypt Section.",
+          "Headed the organizing committee, coordinating all moving parts and ensuring smooth collaboration between team members.",
+          "Ensured strict compliance with IEEE regulations and upheld competition integrity throughout.",
+          "Showcased the talent of Egyptian programmers on a global stage and promoted the IEEE brand through a successful, high-engagement event.",
+        ],
+        photos: [
+          "/photos/IEEE/IEEEXtreme%202024/4F0A0365.JPG",
+          "/photos/IEEE/IEEEXtreme%202024/4F0A0433.JPG",
+          "/photos/IEEE/IEEEXtreme%202024/4F0A0440.JPG",
+          "/photos/IEEE/IEEEXtreme%202024/4F0A0458.JPG",
+        ],
+      },
+      {
+        period: "Oct 2024",
+        role: "Egypt Section Lead — IEEEXtreme 18.0",
+        org: "IEEE Egypt Section",
+        logo: "/logos/IEEEXtreme.jpg",
+        bullets: [
+          "Selected for a second consecutive year as Egypt Section Lead — a recognition of the success of the previous edition.",
+          "Led an expanded 55-person team — 35 ambassadors and 20 volunteers — across 126 participating teams from 80+ Egyptian universities and student branches.",
+          "Organized the competition end-to-end: planning, inter-branch communications, and full operational management.",
+          "Led the organizing committee and ensured full compliance with IEEE regulations across an even larger, more complex nationwide event.",
         ],
         photos: [
           "/photos/IEEE/IEEEXtreme%202024/4F0A0365.JPG",
