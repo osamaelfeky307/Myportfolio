@@ -240,10 +240,14 @@ export const EXPERIENCE: ExperienceCard[] = [
           "Showcased the talent of Egyptian programmers on a global stage and promoted the IEEE brand through a successful, high-engagement event.",
         ],
         photos: [
-          "/photos/IEEE/IEEEXtreme%202024/4F0A0365.JPG",
-          "/photos/IEEE/IEEEXtreme%202024/4F0A0433.JPG",
-          "/photos/IEEE/IEEEXtreme%202024/4F0A0440.JPG",
-          "/photos/IEEE/IEEEXtreme%202024/4F0A0458.JPG",
+          "/photos/IEEE/IEEEXtreme%202023/10.jpg",
+          "/photos/IEEE/IEEEXtreme%202023/35.jpg",
+          "/photos/IEEE/IEEEXtreme%202023/36.jpg",
+          "/photos/IEEE/IEEEXtreme%202023/45.jpg",
+          "/photos/IEEE/IEEEXtreme%202023/472712532_904548375171010_4124694494272602560_n.jpg",
+          "/photos/IEEE/IEEEXtreme%202023/472744308_904548108504370_1044602280217114647_n.jpg",
+          "/photos/IEEE/IEEEXtreme%202023/8.png",
+          "/photos/IEEE/IEEEXtreme%202023/image.png",
         ],
       },
       {
