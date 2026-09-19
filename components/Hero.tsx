@@ -49,12 +49,12 @@ export default function Hero() {
           <div className="animate-fade-in-up">
 
             {/* Availability badge */}
-            <div className="inline-flex items-center gap-2.5 mb-6 px-4 py-1.5 border border-accent/40 bg-accent/10 rounded-full text-xs font-mono tracking-widest text-accent shadow-[0_0_15px_rgba(249,115,22,0.1)]">
+            <div className="inline-flex items-center gap-3 mb-6 px-5 py-2 border border-accent/40 bg-accent/10 rounded-full text-xs font-mono tracking-widest text-accent shadow-[0_0_15px_rgba(249,115,22,0.1)]">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inset-0 inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                 <span className="relative inline-flex rounded-full h-full w-full bg-accent" />
               </span>
-              <span className="leading-none mt-[2px]">Available for work</span>
+              <span className="leading-none pt-0.5">Available for work</span>
             </div>
 
             <span className="editorial-label block mb-4 md:mb-6 text-accent">00 — Introduction</span>
