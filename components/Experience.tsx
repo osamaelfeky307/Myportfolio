@@ -4,7 +4,7 @@ import { EXPERIENCE, ExperienceEntry } from "@/lib/data";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import FadeIn from "./FadeIn";
 import Carousel from "./Carousel";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // Component to automatically highlight numbers in text
 const HighlightNumbers = ({ text }: { text: string }) => {
@@ -24,14 +24,56 @@ const HighlightNumbers = ({ text }: { text: string }) => {
   );
 };
 
-const ExperienceAccordion = ({ entry, isLast }: { entry: ExperienceEntry; isLast: boolean }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ExperienceAccordion = ({ 
+  entry, 
+  isLast,
+  isOpen,
+  onToggle
+}: { 
+  entry: ExperienceEntry; 
+  isLast: boolean;
+  isOpen: boolean;
+  onToggle: () => void;
+}) => {
+  const accordionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isOpen && accordionRef.current) {
+      const element = accordionRef.current;
+      const yOffset = -120; // Accounts for the 80px navbar + some padding
+
+      const smoothScroll = () => {
+        if (element) {
+          const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
+      };
+
+      // Start scrolling almost immediately for a responsive feel
+      const t1 = setTimeout(smoothScroll, 50);
+      // Correct the position once the collapse animation of the previous item is finishing
+      const t2 = setTimeout(smoothScroll, 450);
+
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+      };
+    }
+  }, [isOpen]);
 
   return (
-    <div className={`py-6 md:py-4 ${!isLast ? "border-b-2 border-border/60" : ""} group`}>
+    <div 
+      ref={accordionRef}
+      className={`group ${!isLast ? "border-b-2 border-border/60" : ""}`}
+      style={{
+        paddingTop: "1.5rem",
+        paddingBottom: "1.5rem",
+        marginBottom: !isLast ? "2rem" : "0"
+      }}
+    >
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left py-4 md:py-10 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8 hover:bg-fg/5 transition-colors px-2 -mx-2 md:px-6 md:-mx-6 rounded-2xl group relative"
+        onClick={onToggle}
+        className="w-full text-left py-4 md:py-10 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-8 hover:bg-fg/5 transition-colors px-4 -mx-4 md:px-6 md:-mx-6 rounded-2xl group relative"
       >
         <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-16 w-full pr-20 md:pr-0">
           {/* Period - Acts as the bullet/indicator */}
@@ -153,6 +195,8 @@ const ExperienceAccordion = ({ entry, isLast }: { entry: ExperienceEntry; isLast
 };
 
 export default function Experience() {
+  const [openId, setOpenId] = useState<string | null>(null);
+
   return (
     <section
       id="experience"
@@ -170,20 +214,28 @@ export default function Experience() {
           {EXPERIENCE.map((block) => (
             <div key={block.id}>
               <FadeIn delay={0.1}>
-                <h3 className="text-lg md:text-2xl font-bold text-fg uppercase tracking-[0.2em] mb-6 md:mb-12 border-b-2 border-border/60 pb-4 md:pb-6">
+                <h3 
+                  className="text-lg md:text-2xl font-bold text-fg uppercase tracking-[0.2em] border-b-2 border-border/60"
+                  style={{ paddingBottom: "1.5rem", marginBottom: "2.5rem" }}
+                >
                   {block.heading}
                 </h3>
               </FadeIn>
 
               <div className="flex flex-col">
-                {block.entries.map((entry, ei) => (
-                  <FadeIn key={ei} delay={0.1 + ei * 0.1}>
-                    <ExperienceAccordion 
-                      entry={entry} 
-                      isLast={ei === block.entries.length - 1} 
-                    />
-                  </FadeIn>
-                ))}
+                {block.entries.map((entry, ei) => {
+                  const id = `${block.id}-${ei}`;
+                  return (
+                    <FadeIn key={ei} delay={0.1 + ei * 0.1}>
+                      <ExperienceAccordion 
+                        entry={entry} 
+                        isLast={ei === block.entries.length - 1} 
+                        isOpen={openId === id}
+                        onToggle={() => setOpenId(openId === id ? null : id)}
+                      />
+                    </FadeIn>
+                  );
+                })}
               </div>
             </div>
           ))}
