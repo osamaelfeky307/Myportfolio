@@ -129,6 +129,23 @@ export interface ExperienceCard {
 
 export const EXPERIENCE: ExperienceCard[] = [
   {
+    id: "international",
+    heading: "International Programs",
+    icon: "globe",
+    entries: [
+      {
+        period: "2026",
+        role: "HorizonCraft Program Trainee",
+        org: "HorizonCraft — International Placement Program",
+        bullets: [
+          "Trained in the HorizonCraft program, an international placement program connecting engineers with companies abroad.",
+          "Built cross-cultural communication and collaboration skills alongside participants from different countries and backgrounds.",
+          "Open to travel anywhere worldwide, and genuinely enjoys working with people from different cultures and backgrounds.",
+        ],
+      },
+    ],
+  },
+  {
     id: "leadership",
     heading: "Tech Leadership & Education",
     icon: "users",

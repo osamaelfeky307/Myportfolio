@@ -6,10 +6,10 @@ import FadeIn from "./FadeIn";
 
 export default function Work() {
   return (
-    <section id="work" className="py-24 md:py-[15rem] bg-bg flex justify-center w-full">
+    <section id="work" className="py-20 md:py-[7rem] bg-bg flex justify-center w-full">
       <div className="w-[88%] max-w-5xl mx-auto">
 
-        <div className="flex items-baseline gap-8 mb-16 md:mb-[8rem] border-b border-border pb-8">
+        <div className="flex items-baseline gap-8 mb-12 md:mb-[3.5rem] border-b border-border pb-8">
           <span className="editorial-label text-accent">04</span>
           <h2 className="font-serif text-5xl md:text-6xl font-bold text-fg tracking-tight">
             Selected Work

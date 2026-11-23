@@ -13,10 +13,10 @@ const PROFICIENCY_COLOR: Record<string, string> = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-[15rem] bg-white flex justify-center w-full">
+    <section id="skills" className="py-20 md:py-[7rem] bg-white flex justify-center w-full">
       <div className="w-[88%] max-w-5xl mx-auto">
 
-        <div className="flex items-baseline gap-8 mb-16 md:mb-[8rem] border-b border-border pb-8">
+        <div className="flex items-baseline gap-8 mb-12 md:mb-[3.5rem] border-b border-border pb-8">
           <span className="editorial-label text-accent">05</span>
           <h2 className="font-serif text-5xl md:text-6xl font-bold text-fg tracking-tight">
             Expertise

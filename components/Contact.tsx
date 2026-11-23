@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-32 md:py-[20rem] my-24 md:my-[15rem] bg-accent text-white flex justify-center w-full relative overflow-hidden"
+      className="py-24 md:py-[8rem] my-12 md:my-[6rem] bg-accent text-white flex justify-center w-full relative overflow-hidden"
     >
       {/* Stripe texture overlay */}
       <div className="absolute inset-0 stripe-pattern pointer-events-none" />

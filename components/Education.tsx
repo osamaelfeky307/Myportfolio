@@ -6,10 +6,10 @@ import FadeIn from "./FadeIn";
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 md:py-[15rem] bg-bg flex justify-center w-full">
+    <section id="education" className="py-20 md:py-[7rem] bg-bg flex justify-center w-full">
       <div className="w-[88%] max-w-5xl mx-auto">
         
-        <div className="flex items-baseline gap-8 mb-16 md:mb-[8rem] border-b border-border pb-8">
+        <div className="flex items-baseline gap-8 mb-12 md:mb-[3.5rem] border-b border-border pb-8">
           <span className="editorial-label text-accent">03</span>
           <h2 className="font-serif text-5xl md:text-6xl font-bold text-fg tracking-tight">
             Education
@@ -20,7 +20,7 @@ export default function Education() {
           {EDUCATION.map((item, i) => (
             <FadeIn key={item.id} delay={0.1}>
               <div 
-                className="py-32 border-b border-border flex flex-col md:flex-row gap-8 md:gap-16 hover:bg-black/[0.02] transition-colors -mx-6 px-6" 
+                className="py-14 border-b border-border flex flex-col md:flex-row gap-8 md:gap-16 hover:bg-black/[0.02] transition-colors -mx-6 px-6" 
               >
               
               {/* Period & Note */}

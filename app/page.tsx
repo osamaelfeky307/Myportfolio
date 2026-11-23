@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import SectionRail from "@/components/SectionRail";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Work from "@/components/Work";
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main>
       <Navbar />
+      <SectionRail />
       <Hero />
       <About />
       <Experience />
