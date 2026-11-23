@@ -52,26 +52,20 @@ export default function Work() {
                       {project.title}
                     </h3>
 
-                    <a
-                      href={project.evidenceUrl}
-                      target={project.evidenceUrl !== "#" ? "_blank" : undefined}
-                      rel="noopener noreferrer"
-                      className={`flex items-center gap-2 text-xs uppercase tracking-widest font-medium shrink-0 mt-1 transition-all duration-200 ${
-                        project.evidenceUrl === "#"
-                          ? "text-fg-3/30 cursor-not-allowed"
-                          : "text-fg hover:text-accent"
-                      }`}
-                    >
-                      {project.evidenceLabel}
-                      <ArrowUpRight
-                        size={16}
-                        className={
-                          project.evidenceUrl === "#"
-                            ? "opacity-30"
-                            : "group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform"
-                        }
-                      />
-                    </a>
+                    {project.evidenceUrl && project.evidenceUrl !== "#" && (
+                      <a
+                        href={project.evidenceUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-xs uppercase tracking-widest font-medium shrink-0 mt-1 text-fg hover:text-accent transition-all duration-200"
+                      >
+                        {project.evidenceLabel}
+                        <ArrowUpRight
+                          size={16}
+                          className="group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform"
+                        />
+                      </a>
+                    )}
                   </div>
 
                   <p className="text-fg-2 text-lg leading-[1.8] max-w-2xl">
