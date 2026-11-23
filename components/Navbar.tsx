@@ -10,6 +10,8 @@ const NAV_LINKS = [
   { label: "Experience", href: "#experience" },
   { label: "Work",       href: "#work" },
   { label: "Skills",     href: "#skills" },
+  { label: "Education",  href: "#education" },
+  { label: "Contact",    href: "#contact" },
 ];
 
 const SECTION_IDS = NAV_LINKS.map((l) => l.href.slice(1));
@@ -69,7 +71,7 @@ export default function Navbar() {
           <div className="relative h-16 w-64 md:h-20 md:w-80 transition-transform group-hover:scale-105">
             <Image
               src="/logos/OsamaElfekyLogo.png"
-              alt="Osama Elfeky"
+              alt="Osama Othman"
               fill
               className="object-contain object-left"
               priority
