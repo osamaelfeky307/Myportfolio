@@ -22,18 +22,20 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Osama Elfeky — Software Engineer & Medical Informatics",
+  metadataBase: new URL("https://portfolio-osos7.vercel.app"),
+  title: "Osama Othman — Software Engineer & Medical Informatics",
   description:
-    "Personal portfolio of Osama Elfeky — BSc Computers & AI (Benha University). AI-powered healthcare software, full-stack web, and cross-platform mobile.",
+    "Personal portfolio of Osama Othman — BSc Computers & AI (Benha University). AI-powered healthcare software, full-stack web, and cross-platform mobile.",
   keywords: [
-    "Osama Elfeky", "Software Engineer", "Medical Informatics",
+    "Osama Othman", "Osama Elfeky", "Software Engineer", "Medical Informatics",
     "AI", "Next.js", "Flutter", "Healthcare", "Egypt",
   ],
-  authors: [{ name: "Osama Elfeky", url: "https://www.linkedin.com/in/osama-elfeky-952ab7202/" }],
+  authors: [{ name: "Osama Othman", url: "https://www.linkedin.com/in/osama-elfeky-952ab7202/" }],
   openGraph: {
-    title: "Osama Elfeky — Software Engineer & Medical Informatics",
+    title: "Osama Othman — Software Engineer & Medical Informatics",
     description: "AI-powered healthcare diagnostics, scalable web apps, and cross-platform mobile development.",
     type: "website",
+    images: [{ url: "/profile.jpg", width: 1200, height: 1500, alt: "Osama Othman" }],
   },
 };
 
