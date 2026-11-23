@@ -87,11 +87,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-fg-3 uppercase tracking-widest">
-          <span>&copy; {year} Osama Elfeky.</span>
+          <span>&copy; {year} Osama Othman.</span>
           <span>Designed &amp; Built with Precision.</span>
         </div>
 
       </div>
     </footer>
   );
-}
+            }
