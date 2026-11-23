@@ -51,7 +51,7 @@ export default function SplashScreen() {
           >
             <Image
               src="/logos/OsamaElfekyLogo.png"
-              alt="Osama Elfeky"
+              alt="Osama Othman"
               fill
               className="object-contain object-center"
               priority
