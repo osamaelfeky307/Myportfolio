@@ -134,6 +134,7 @@ export default function Carousel({ photos, autoplay = false, autoplayInterval = 
         <>
           <button 
             onClick={prev}
+            aria-label="Previous photo"
             className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-fg hover:bg-white hover:text-accent transition-colors opacity-100 md:opacity-0 group-hover:opacity-100 z-10"
           >
             <ChevronLeft size={20} />
@@ -141,6 +142,7 @@ export default function Carousel({ photos, autoplay = false, autoplayInterval = 
           
           <button 
             onClick={next}
+            aria-label="Next photo"
             className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 backdrop-blur shadow-sm flex items-center justify-center text-fg hover:bg-white hover:text-accent transition-colors opacity-100 md:opacity-0 group-hover:opacity-100 z-10"
           >
             <ChevronRight size={20} />
@@ -151,6 +153,7 @@ export default function Carousel({ photos, autoplay = false, autoplayInterval = 
             {photos.map((_, i) => (
               <button
                 key={i}
+                aria-label={`Go to photo ${i + 1}`}
                 onClick={(e) => {
                   e.preventDefault();
                   setIndex(i);
