@@ -3,8 +3,8 @@
 // ============================================================
 
 export const PERSONAL = {
-  name: "Osama Elfeky",
-  initials: "OE",
+  name: "Osama Othman",
+  initials: "OO",
   title: "Software Engineer & Medical Informatics",
   tagline:
     "Building intelligent software solutions, from AI-powered healthcare diagnostics to scalable web and cross-platform apps.",
@@ -15,7 +15,7 @@ export const PERSONAL = {
   github: "https://github.com/osamaelfeky307",
   whatsapp: "https://wa.me/qr/J2SRPUH2VRODH1",
   cvLink:
-    "/Osama Fayez Abdelkhalik Attia Othamn CV - July 2026.pdf",
+    "/Osama-Othman-CV-2026.pdf",
 };
 
 export type ProjectTag =
@@ -41,8 +41,8 @@ export interface Project {
   status: string;
   statusVariant: StatusVariant;
   techStack: string[];
-  evidenceLabel: string;
-  evidenceUrl: string;
+  evidenceLabel?: string;
+  evidenceUrl?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -71,7 +71,8 @@ export const PROJECTS: Project[] = [
     statusVariant: "research",
     techStack: ["Python", "Machine Learning", "Data Analysis", "IEEE"],
     evidenceLabel: "IEEE Paper",
-    evidenceUrl: "#", // placeholder — add DOI once available
+    evidenceUrl:
+      "https://docs.google.com/document/d/1FkEIvOTknGhugJp0YrEbtjzlpYiMAwXg/view",
   },
   {
     id: "schools-project",
@@ -83,8 +84,6 @@ export const PROJECTS: Project[] = [
     status: "✅ Deployed",
     statusVariant: "deployed",
     techStack: ["Next.js", "React", "PostgreSQL"],
-    evidenceLabel: "GitHub",
-    evidenceUrl: "#", // placeholder — add repo URL
   },
   {
     id: "commander-gate",
@@ -96,8 +95,6 @@ export const PROJECTS: Project[] = [
     status: "✅ Deployed",
     statusVariant: "deployed",
     techStack: ["Python", "Desktop", "Real-time", "Access Control"],
-    evidenceLabel: "GitHub",
-    evidenceUrl: "#", // placeholder — add repo URL
   },
   {
     id: "nike-eco",
@@ -109,8 +106,6 @@ export const PROJECTS: Project[] = [
     status: "🎓 ITI Project — 92%",
     statusVariant: "completed",
     techStack: ["Flutter", "Dart", "Firebase"],
-    evidenceLabel: "GitHub",
-    evidenceUrl: "#", // placeholder — add repo URL
   },
 ];
 
@@ -358,8 +353,8 @@ export const EDUCATION: EducationItem[] = [
     field: "Scientific Computing / Medical Informatics",
     period: "2020 – 2024",
     grade: "GPA 3.11 · 132 Credits",
-    link: "/Osama Fayez Abdelkhalik Attia Othamn CV - July 2026.pdf",
-    linkLabel: "View Transcript",
+    link: "/Osama-Othman-CV-2026.pdf",
+    linkLabel: "Download CV",
     note: "Benha, Egypt",
     logo: "/logos/Benha University.png",
   },
