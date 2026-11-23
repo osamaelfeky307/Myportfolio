@@ -138,7 +138,7 @@ const ExperienceCard = ({
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={src}
-                  alt={`${entry.role} photo ${pi + 1}`}
+                  alt={entry.photoAlts?.[pi] ?? `${entry.role} photo ${pi + 1}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -158,7 +158,7 @@ const ExperienceCard = ({
 
           {photosOpen && (
             <div className="mt-6 max-w-4xl rounded-2xl overflow-hidden border border-border/30 shadow-lg">
-              <Carousel photos={photos} autoplay autoplayInterval={4000} />
+              <Carousel photos={photos} alts={entry.photoAlts} autoplay autoplayInterval={4000} />
             </div>
           )}
         </div>

@@ -118,6 +118,7 @@ export interface ExperienceEntry {
   secondaryLogo?: string;
   bullets: string[];
   photos?: string[];
+  photoAlts?: string[];
 }
 
 export interface ExperienceCard {
@@ -141,6 +142,22 @@ export const EXPERIENCE: ExperienceCard[] = [
           "Trained in the HorizonCraft program, an international placement program connecting engineers with companies abroad.",
           "Built cross-cultural communication and collaboration skills alongside participants from different countries and backgrounds.",
           "Open to travel anywhere worldwide, and genuinely enjoys working with people from different cultures and backgrounds.",
+        ],
+        photos: [
+          "/photos/HorizonCraft/1.jpg",
+          "/photos/HorizonCraft/2.jpg",
+          "/photos/HorizonCraft/3.jpg",
+          "/photos/HorizonCraft/4.jpg",
+          "/photos/HorizonCraft/5.jpg",
+          "/photos/HorizonCraft/6.jpg",
+        ],
+        photoAlts: [
+          "Osama with a fellow participant next to the HorizonCraft program banner",
+          "Osama at the HorizonCraft panel event in a grey blazer",
+          "Osama with a HorizonCraft organizer in front of the program banner",
+          "Osama with a fellow participant at the HorizonCraft conference",
+          "The HorizonCraft 2026 cohort group photo",
+          "Group dinner with the HorizonCraft cohort at the Hilton",
         ],
       },
     ],

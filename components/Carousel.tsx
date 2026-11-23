@@ -6,11 +6,12 @@ import { motion } from "framer-motion";
 
 interface CarouselProps {
   photos: string[];
+  alts?: string[];
   autoplay?: boolean;
   autoplayInterval?: number;
 }
 
-export default function Carousel({ photos, autoplay = false, autoplayInterval = 3500 }: CarouselProps) {
+export default function Carousel({ photos, alts, autoplay = false, autoplayInterval = 3500 }: CarouselProps) {
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -121,7 +122,7 @@ export default function Carousel({ photos, autoplay = false, autoplayInterval = 
           {photos.map((photo, i) => (
             <div key={i} className="w-full shrink-0 h-full relative bg-neutral-900">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={photo} alt={`Photo ${i + 1}`} className="w-full h-full object-contain pointer-events-none" />
+              <img src={photo} alt={alts?.[i] ?? `Photo ${i + 1}`} className="w-full h-full object-contain pointer-events-none" />
               
               {/* Subtle gradient overlay to make pagination dots more visible */}
               <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
