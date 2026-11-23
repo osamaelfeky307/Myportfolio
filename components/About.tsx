@@ -10,7 +10,7 @@ const QUICK_FACTS = [
   { icon: Code2,  label: "Focus",     value: "AI / Backend" },
   { icon: Heart,  label: "IEEE Lead", value: "2023–2024" },
   { icon: Shield, label: "Military",  value: "Completed" },
-  { icon: Globe,  label: "Passport",  value: "Ready" },
+  { icon: Globe,  label: "Open to",   value: "Travel worldwide" },
 ];
 
 const AWARDS = [
@@ -45,7 +45,7 @@ const AWARDS = [
   {
     title: "IEEE ESPC 2024 — 4th Place",
     sub: "ASD Detection · 4th of 27",
-    link: "#",
+    link: "https://docs.google.com/document/d/1FkEIvOTknGhugJp0YrEbtjzlpYiMAwXg/view",
     photos: [
       "/photos/ESPC/1.webp",
       "/photos/ESPC/2.jpg",
@@ -95,6 +95,9 @@ export default function About() {
                 </p>
                 <p>
                   I am focused on applying AI solutions and structured software development in Medical Informatics to improve healthcare outcomes and streamline medical workflows.
+                </p>
+                <p>
+                  I recently trained in the HorizonCraft program, an international placement program connecting engineers with companies abroad. I am open to travel anywhere and genuinely enjoy working with people from different cultures and backgrounds.
                 </p>
               </div>
             </FadeIn>
