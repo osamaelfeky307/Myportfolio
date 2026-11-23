@@ -60,9 +60,9 @@ export default function Hero() {
             <span className="editorial-label block mb-4 md:mb-6 text-accent">00 — Introduction</span>
 
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight md:leading-none text-fg mb-10 md:mb-16">
-              Osama Fayez<br/>Abdelkhalik<br/>
+              Osama<br/>
               <span className="relative inline-block">
-                Attia Othman.
+                Othman.
                 <span
                   className="absolute -bottom-2 left-0 h-[3px] bg-accent rounded-full"
                   style={{ width: "60%" }}
@@ -111,7 +111,7 @@ export default function Hero() {
               <div className="group relative w-full aspect-[4/5] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700" style={{ borderRadius: "50% 50% 8px 8px" }}>
                 <Image
                   src="/profile.jpg"
-                  alt="Osama Elfeky"
+                  alt="Osama Othman"
                   fill
                   className={`object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out ${isInView ? "max-lg:grayscale-0 max-lg:scale-105" : ""}`}
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -123,7 +123,7 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-x-4 gap-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-8">
               {STATS.map((stat) => (
                 <div
                   key={stat.label}
