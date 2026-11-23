@@ -48,7 +48,6 @@ const AWARDS = [
     link: "https://docs.google.com/document/d/1FkEIvOTknGhugJp0YrEbtjzlpYiMAwXg/view",
     photos: [
       "/photos/ESPC/1.webp",
-      "/photos/ESPC/2.jpg",
       "/photos/ESPC/3.webp",
       "/photos/ESPC/653682085_18072646319539726_5550343415220154945_n.jpg",
       "/photos/ESPC/656265813_18124663498582559_8893943703404040947_n.webp",
